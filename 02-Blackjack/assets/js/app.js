@@ -102,23 +102,16 @@ const crearCarta = (carta,turno) =>{
 }
 
 
-const determinarGanador = () =>{
+const determinarGanador = () =>{  
+
     setTimeout(()=>{
         const [puntosMinimos , puntosComputadora] = puntosJugadores;
-        if(puntosComputadora === puntosMinimos){
-            alert("EMPATE , NADIE GANA")
-        }else if(puntosMinimos > 21){
-            alert("COMPUTADORA GANA");    
-        }else if(puntosMinimos <= 21 && puntosComputadora > 21) {
-            alert("GANA JUGADOR");
-        }else{
-            alert("GANA LA COMPUTADORA");
-        }
-
-        //
+        (puntosComputadora === puntosMinimos)           ? alert("EMPATE , NADIE GANA") : 
+        (puntosMinimos > 21)                            ? alert("COMPUTADORA GANA") :
+        (puntosMinimos <= 21 && puntosComputadora > 21) ? alert("GANA JUGADOR") :  alert("GANA LA COMPUTADORA");
     },60);
 
-    estadoBotones(false);
+    estadoBotones(true);
 }
 
 const turnoComputadora = (puntosMinimos) => {
@@ -133,7 +126,8 @@ const turnoComputadora = (puntosMinimos) => {
     determinarGanador();
 }
 
-const estadoBotones = (estado = false) =>{
+const estadoBotones = (estado = false) =>{    
+    
     btnPedir.disabled = estado;
     btnDetener.disabled = estado;
 }
@@ -163,18 +157,14 @@ btnPedir.addEventListener('click',() => {
 
 });
 
-btnDetener.addEventListener('click',() => {
-   
+btnDetener.addEventListener('click',() => {   
     estadoBotones(false);
     turnoComputadora(puntosJugadores[0]);
 });
 
 
-btnNuevoJuego.addEventListener('click', () =>{
-    
-    inicializarJuego();
-
-    
+btnNuevoJuego.addEventListener('click', () =>{    
+    inicializarJuego();   
 });
     
 
