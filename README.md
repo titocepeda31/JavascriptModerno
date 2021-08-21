@@ -1,2 +1,15 @@
 # JavascriptModerno
 Curso para dominar el lenguaje
+
+# 01 FUNDAMENTOS JS
+
+# PRIMITIVOS
+
+Es una información que no es un objeto y son inmutables
+
+Boolean = TRUE / FALSE
+NULL
+UNDEFINED / VARIABLE DECLARADA QUE NO SE LE ASIGNA VALOR
+NUMBER / INTEGER - FLOAT 
+STRING / CADENA DE CARACTERES
+SYMBOL / ES UN VALOR UNICO QUE NO PUEDE SER IGUAL A OTRO VALOR
